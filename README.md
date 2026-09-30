@@ -4,60 +4,70 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
 
-**Penulis:** Ahmad Izzuddin Ulinnuha[cite: 2]  
-**Proyek:** Submission Pengembangan Machine Learning (Image Classification)[cite: 2]  
+**Author:** Ahmad Izzuddin Ulinnuha[cite: 2]  
+**Project:** Machine Learning Development Submission (Image Classification)[cite: 2]  
 
 ---
 
-## 📌 Deskripsi Proyek
-Proyek ini mengimplementasikan arsitektur **Convolutional Neural Network (CNN)** berbasis **TensorFlow/Keras** untuk mengklasifikasikan 5 varietas gambar beras secara otomatis[cite: 2]. Model ini dibangun dan dioptimalkan hingga mencapai tingkat akurasi **di atas 95%** pada data latih maupun data uji[cite: 2].
+## 📌 Project Overview
+This project implements a **Convolutional Neural Network (CNN)** architecture built with **TensorFlow/Keras** to classify 5 varieties of rice images[cite: 2]. The model is trained and optimized to achieve an accuracy target **above 95%** on both training and test datasets[cite: 2].
 
 ---
 
 ## 📊 Dataset Overview
 
-- **Sumber Dataset:** [Rice Image Dataset (Kaggle)](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset)[cite: 2]
-- **Total Citra:** 75.000 gambar[cite: 2]
-- **Jumlah Kelas (5 Varietas):** `Arborio`, `Basmati`, `Ipsala`, `Jasmine`, `Karacadag`
+- **Dataset Source:** [Rice Image Dataset (Kaggle)](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset)[cite: 2]
+- **Total Images:** 75,000 images[cite: 2]
+- **Classes (5 Varieties):** `Arborio`, `Basmati`, `Ipsala`, `Jasmine`, `Karacadag`[cite: 2]
 
-### Pembagian Data (Data Split)
-| Subset Data | Persentase |
+### Dataset Split
+| Subset | Percentage |
 | :--- | :--- |
-| **Train Set** | 80% |
-| **Validation Set** | 10% |
-| **Test Set** | 10% |
+| **Train Set** | 80% |[cite: 2]
+| **Validation Set** | 10% |[cite: 2]
+| **Test Set** | 10% |[cite: 2]
 
 ---
 
-## 🏗️ Arsitektur Model
+## 🏗️ Model Architecture
 
-Model dibangun menggunakan API **Keras Sequential** dengan susunan layer sebagai berikut:
+The model is built using the **Keras Sequential API** with the following layer structure[cite: 2]:
 
-- **Feature Extraction:** 3× Lapisan `Conv2D` untuk ekstraksi fitur visual.
-- **Dimensionality Reduction:** `MaxPooling2D` pada setiap blok konvolusi.
-- **Regularization:** `Dropout(0.5)` untuk mencegah terjadinya *overfitting*.
-- **Classification Head:** `Flatten`, `Dense` layer, dan aktivasi `Softmax` untuk klasifikasi multi-kelas.
-
----
-
-## ⚙️ Pelatihan & Performa Model
-
-- **Optimizer:** Adam
-- **Loss Function:** `categorical_crossentropy`
-- **Custom Callbacks:** Otomatis menghentikan proses *training* saat akurasi *train* dan *validation* mencapai **> 96%**[cite: 2].
-- **Hasil Akhir Performa:**
-  - **Akurasi Training:** > 95%[cite: 2]
-  - **Akurasi Testing:** > 95%[cite: 2]
+- **Feature Extraction:** 3× `Conv2D` layers for visual feature extraction[cite: 2].
+- **Dimensionality Reduction:** `MaxPooling2D` layers following convolution blocks[cite: 2].
+- **Regularization:** `Dropout(0.5)` layer to prevent overfitting[cite: 2].
+- **Classification Head:** `Dense` layer with `Softmax` activation for multi-class classification[cite: 2].
 
 ---
 
-## 📁 Struktur Direktori
+## ⚙️ Training & Performance
+
+- **Optimizer:** Adam Optimizer[cite: 2]
+- **Loss Function:** `categorical_crossentropy`[cite: 2]
+- **Custom Callbacks:** Automatically halts training when training and validation accuracy exceed **96%**[cite: 2].
+- **Final Performance:**
+  - **Training Accuracy:** > 95%[cite: 2]
+  - **Testing Accuracy:** > 95%[cite: 2]
+
+---
+
+## 📁 Directory Structure
 
 ```text
 submission/
-├── tfjs_model/           # Model hasil ekspor dalam format TensorFlow.js
-├── tflite/               # Model hasil ekspor TF-Lite (.tflite & label.txt)
-├── saved_model/          # Model hasil ekspor SavedModel (.pb)
-├── notebook.ipynb        # Jupyter Notebook eksperimen & pelatihan
-├── README.md             # Dokumentasi proyek
-└── requirements.txt      # Daftar library & dependensi Python
+├── tfjs_model/           # Model exported in TensorFlow.js format
+├── tflite/               # Model exported in TF-Lite format (.tflite & label.txt)
+├── saved_model/          # Model exported in SavedModel format (.pb)
+├── notebook.ipynb        # Jupyter Notebook for experimentation & training
+├── README.md             # Project documentation
+└── requirements.txt      # Python dependencies
+```[cite: 2]
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/username/rice-image-classification.git](https://github.com/username/rice-image-classification.git)
+   cd rice-image-classification
